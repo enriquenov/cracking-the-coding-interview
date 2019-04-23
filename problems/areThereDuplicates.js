@@ -1,18 +1,5 @@
-function areThereDuplicates(...args) {
-  if (args.length <= 1) return args.length;
-
-  const freqCounter = {};
-  let i = 0;
-
-  console.log(args);
-  while (i < args.length) {
-    if (!freqCounter[args[i]]) freqCounter[args[i]] = 1;
-    else return true;
-    i++;
-  }
-
-  console.log(freqCounter);
-  return false;
+function areThereDuplicates() {
+  return new Set(arguments).size !== arguments.length;
 }
 
 console.log(areThereDuplicates(1, 2, 3));
