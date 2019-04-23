@@ -1,15 +1,13 @@
 function flatten(arr) {
   let result = [];
 
-  (function helper(arr) {
-    [...arr].forEach(e => {
-      if (Array.isArray(e)) {
-        helper(e);
-      } else {
-        result.push(e);
-      }
-    });
-  })(arr);
+  [...arr].forEach(e => {
+    if (Array.isArray(e)) {
+      result = result.concat(flatten(e));
+    } else {
+      result.push(e);
+    }
+  });
 
   return result;
 }

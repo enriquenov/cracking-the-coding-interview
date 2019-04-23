@@ -1,7 +1,7 @@
 function isPalindrome(str) {
   if (str.length <= 1) return true;
 
-  if (str.length > 1 && str[0] === str[str.length - 1]) {
+  if (str[0] === str[str.length - 1]) {
     return isPalindrome(str.slice(1, str.length - 1));
   }
 
