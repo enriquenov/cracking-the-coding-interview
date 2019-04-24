@@ -1,3 +1,5 @@
+// O(n^2) time | O(1) space
+
 function selectionSort(arr) {
   for (let i = 0; i < arr.length; i++) {
     let min = i;

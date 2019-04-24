@@ -1,3 +1,5 @@
+// O(n^2) time | O(1) space
+
 function bubbleSort(arr) {
   let noSwapped;
   for (let i = arr.length - 1; i >= 0; i--) {
