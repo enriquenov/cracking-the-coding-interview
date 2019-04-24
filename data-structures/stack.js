@@ -12,6 +12,7 @@ class Stack {
     this.size = 0;
   }
 
+  // O(1) space | O(1) time
   push(val) {
     let node = new Node(val);
     if (!this.first) {
@@ -25,6 +26,7 @@ class Stack {
     return this.size++;
   }
 
+  // O(1) space | O(1) time
   pop() {
     if (this.size === 0) return null;
     let temp = this.first;
