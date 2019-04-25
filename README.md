@@ -58,4 +58,40 @@ Practice, practice and more practice!
 - Dynamic Programming
 - Greedy Algorithms
 - Backtracking
-- _Many more!_
+- _... And many more!_
+
+### Topics
+
+- Recursion
+- Searching
+- Sorting
+  - BubbleSort
+  - InsertionSort
+  - SelectionSort
+  - MergeSort
+  - QuickSort
+- Data Structures
+  - Singly Linked List
+  - Doubly Linked List
+  - Queue
+  - Stack
+  - Trees:
+    - Binary Tree
+    - Binary Search Tree (BST)
+    - Tree Traversal:
+      - Depth-First Search (DFS)
+        - InOrder
+        - PreOrder
+        - PostOrder
+      - Breadth-First Search (BFS)
+    - Binary Heap:
+      - Max Binary Heap
+      - Min Binary Heap
+      - Priority Queue
+  - HashTables
+  - Graphs:
+    - Adjacency Matrix
+    - Adjacency List
+    - Graph Traversal:
+      - Depth First Graph Traversal
+      - Breadth First Graph Traversal

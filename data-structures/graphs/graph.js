@@ -52,7 +52,6 @@ class Graph {
     const stack = [node];
     const result = [];
     const visited = {};
-    // const adjacencyList = this.adjacencyList;
 
     visited[node] = true;
 
@@ -64,6 +63,28 @@ class Graph {
         if (!visited[neighbor]) {
           visited[neighbor] = true;
           stack.push(neighbor);
+        }
+      });
+    }
+    return result;
+  }
+
+  BFTIteratively(node) {
+    const queue = [node];
+    const result = [];
+    const visited = {};
+    let currentVertex;
+
+    visited[node] = true;
+
+    while (queue.length) {
+      currentVertex = queue.shift();
+      result.push(currentVertex);
+
+      this.adjacencyList[currentVertex].forEach(neighbor => {
+        if (!visited[neighbor]) {
+          visited[neighbor] = true;
+          queue.push(neighbor);
         }
       });
     }
