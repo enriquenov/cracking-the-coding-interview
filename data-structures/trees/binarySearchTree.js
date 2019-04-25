@@ -58,7 +58,11 @@ class BinarySearchTree {
     return found;
   }
 
-  // Tree Traversal
+  /**********************
+       TREE TRAVERSAL
+  ***********************/
+
+  // Breadth First Search
   BFS() {
     let data = [];
     let queue = [this.root];
@@ -72,6 +76,51 @@ class BinarySearchTree {
       if (currentNode.right) queue.push(currentNode.right);
     }
 
+    return data;
+  }
+
+  // Depth First Search PreOrder => Traverses from the root to the left and down  (Useful to reconstruct a tree)
+  DFSPreOrder() {
+    let data = [];
+    let current = this.root;
+
+    function traverse(node) {
+      data.push(node.val);
+      if (node.left) traverse(node.left);
+      if (node.right) traverse(node.right);
+    }
+
+    traverse(current);
+    return data;
+  }
+
+  // Depth First Search PostOrder
+  DFSPostOrder() {
+    let data = [];
+    let current = this.root;
+
+    function traverse(node) {
+      if (node.left) traverse(node.left);
+      if (node.right) traverse(node.right);
+      data.push(node.val);
+    }
+
+    traverse(current);
+    return data;
+  }
+
+  // Depth First Search InOrder => Traverses from lowest to highest
+  DFSInOrder() {
+    let data = [];
+    let current = this.root;
+
+    function traverse(node) {
+      if (node.left) traverse(node.left);
+      data.push(node.val);
+      if (node.right) traverse(node.right);
+    }
+
+    traverse(current);
     return data;
   }
 }
