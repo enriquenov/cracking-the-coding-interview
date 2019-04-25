@@ -57,6 +57,23 @@ class BinarySearchTree {
     }
     return found;
   }
+
+  // Tree Traversal
+  BFS() {
+    let data = [];
+    let queue = [this.root];
+    let currentNode;
+
+    while (queue.length) {
+      currentNode = queue.shift();
+      data.push(currentNode.val);
+
+      if (currentNode.left) queue.push(currentNode.left);
+      if (currentNode.right) queue.push(currentNode.right);
+    }
+
+    return data;
+  }
 }
 
 let tree = new BinarySearchTree();
