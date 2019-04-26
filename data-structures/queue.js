@@ -44,10 +44,10 @@ class Queue {
 
 let queue = new Queue();
 
-queue.push(3);
-queue.push(62);
-queue.push(90);
-queue.push(12);
-queue.push(8);
+queue.enqueue(3);
+queue.enqueue(62);
+queue.enqueue(90);
+queue.enqueue(12);
+queue.enqueue(8);
 
 console.log(queue);
