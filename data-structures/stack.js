@@ -5,11 +5,15 @@ class Node {
   }
 }
 
-class Stack {
+export default class Stack {
   constructor() {
     this.first = null;
     this.last = null;
     this.size = 0;
+  }
+
+  isEmpty() {
+    return this.size === 0;
   }
 
   // O(1) space | O(1) time
@@ -46,4 +50,4 @@ stack.push(30);
 stack.push(50);
 stack.push(78);
 
-console.log(stack);
+// console.log(stack);
